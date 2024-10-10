@@ -1,0 +1,10 @@
+.idea/
+azure_functions_test_upload.py
+config.py
+daily_sales_pipeline.iml
+from azure.py
+function_app.py
+main_deprecated.py
+requirements.txt
+weekly_sales_automator.py
+__pycache__/
