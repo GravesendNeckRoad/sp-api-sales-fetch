@@ -1,4 +1,4 @@
-This is an Amazon SP-API sales/inventory report automator. 
+This is a simple ETL pipeline for Amazon SP-API sales/inventory reports. 
 
 Standalone methods allow you to retrieve orders and inventory data from the SP-API. The script has been optimized to avoid throttle, but depending on the report you may need to fine-tune the exponential backoff helper method.
 
@@ -6,6 +6,6 @@ The main compile_report method will run inventory and orders reports and return 
 
 Great for a quick glance at what is selling and how you're doing on a day-to-day basis. To use, simply add the required credentials and parameters through config.py, and run main.py.
 
-Oct 24 notes :
+Oct '24 notes :
 -Azure Function CRON code snippet to be added later
 -Returns API not working from Amazons end
