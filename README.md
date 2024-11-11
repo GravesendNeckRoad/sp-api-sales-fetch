@@ -1,6 +1,8 @@
 UPD 11/8/2024
 
-Added methods to handle inventory report in the case of API failure. Most recent backup report will be generated instead.
-Logically, if the inventory API returns failure, then it means a report was already generated within the last 30 minutes, so you can fall back to it and still have near real-time data. 
+CRON job is too unreliable with this choppy API, so I have reverted to a HTTP_trigger. A logic app (workflow pictured in attached jpg file) will trigger the function daily, and direct the retries and consecutive actions such as checking for blob update and sending email. 
 
-Also switched back to an HTTP trigger. Decided that the logic app will handle the CRON timer, since it is already detecing blob and sending email, may as well integrate everything through there.
+Also added methods to handle reports in the case of API failure. Most recent backup report will be generated instead. Logically, if the in-stock inventory API returns failure, then it means a report was already generated within the last 30 minutes, so you can fall back to it and still have near real-time data. This method is more stable than juggling fails/retries, which can have unintended results.
+
+TO-DO;
+Switch to a durable function to get the real time inventory data without having to fall back to past reports. 
