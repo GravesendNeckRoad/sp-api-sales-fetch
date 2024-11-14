@@ -4,5 +4,4 @@ CRON job is too unreliable with this choppy API, so I have reverted to a HTTP_tr
 
 Also added methods to handle reports in the case of API failure. Most recent backup report will be generated instead. Logically, if the in-stock inventory API returns failure, then it means a report was already generated within the last 30 minutes, so you can fall back to it and still have near real-time data. This method is more stable than juggling fails/retries, which can have unintended results.
 
-TO-DO;
-Switch to a durable function to get the real time inventory data without having to fall back to past reports. 
+May switch to a durable function in the future IF this method proves unstable. Working fine for now, though. 
