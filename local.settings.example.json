@@ -15,6 +15,6 @@
     "ACC1_VAULT_NAME": "acc1-keyvault",
     "PO_VAULT_NAME": "po-keyvault",
     "ACC3_VAULT_NAME": "acc3-keyvault",
-    "ACCOUNTS_LIST": "['PO', 'DTA', 'UW']"
+    "ACCOUNTS_LIST": "['ACC1', 'PO', 'ACC3']"
   }
 }
