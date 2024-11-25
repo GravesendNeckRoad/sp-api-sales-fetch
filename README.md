@@ -10,4 +10,8 @@ UPD 11/25/2024
 EXAMPLE:
 https://{functionAppName}.azurewebsites.net/api/orchestrators/{functionName}?code={functionKey}&account_name={name}&start_date={11-25-2024}
 
-See local.settings.example.json and docstring in Utilities/report_tools.py for required environment variables, specific instructions.
+See local.settings.example.json and docstring in Utilities/report_tools.py for required environment variables*, specific instructions.
+
+*Note; ACCOUNTS_LIST environment variable is not required for this function, but was left to keep the utils codebase unified. 
+       It is required for the sell-thru aka on-hand durable function ../GravesendNeckRoad/sell-thru-durable-ETL 
+        
